@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-        $user = User::latest()->get();
+        $users = User::latest()->get();
         return view('users.index',['users'=>$users]);
     }
 
